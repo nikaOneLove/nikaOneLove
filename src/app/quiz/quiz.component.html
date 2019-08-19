@@ -15,8 +15,8 @@
 
 
 <ng-template #previewTemplate>
+  <img mat-card-image src="assets/images/11.jpg" alt="">
   <mat-card>
-    <img mat-card-image src="assets/images/11.jpg" alt="">
     <mat-card-content>
       <p class="preview-text">
         Здравстуй, маленькая. Я долго думал, что подарить тебе на наши 11 месяцев. И надумал, что напомнить тебе о
@@ -34,16 +34,27 @@
 
 <ng-template #finalTemplate>
   <mat-card>
-    <img mat-card-image src="assets/images/8.jpg" alt="">
+    <img *ngIf="score >= 8" mat-card-image src="assets/images/8.jpg" alt="">
+    <img *ngIf="score >= 5 && score < 8" mat-card-image src="assets/images/9.jpg" alt="">
+    <img *ngIf="score < 5" mat-card-image src="assets/images/10.jpg" alt="">
     <mat-card-content>
       <div class="score-text">
         {{score}}/10
       </div>
-      <p class="preview-text">
+      <p *ngIf="score >= 8">Вау, ты выходит самая большая маленькая любовь</p>
+      <p *ngIf="score >= 5 && score < 8">Хороший результат. Но можно лучше</p>
+      <p *ngIf="score < 5">Мда, могло быть лучше. Ты точно Ника?</p>
+      <p *ngIf="score >= 8">
         Знай, что я безумно по тебе скучаю. И страшно сильно люблю. Ты моя маленькая жена и половинка. Жизнь без тебя
         это не жизнь.
       </p>
     </mat-card-content>
   </mat-card>
   <button (click)="startAgain()" mat-raised-button class="quiz-button" color="primary">Пройти еще раз</button>
+  <a href="">
+    <button mat-raised-button class="quiz-button" color="primary">
+      Забрать приз
+      <mat-icon color="accent">music_note</mat-icon>
+    </button>
+  </a>
 </ng-template>
