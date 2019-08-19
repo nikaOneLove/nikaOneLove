@@ -42,7 +42,8 @@ export class QuizComponent {
   }
 
   startAgain(): void {
-    this.questionNumber = 1;
+    this.questionNumber = 0;
+    this.next();
     this.quizService.clear();
     this.isFinal = false;
   }
