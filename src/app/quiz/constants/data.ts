@@ -6,7 +6,7 @@ export const questions: readonly Question[] = [
     answers: [
       {text: 'Холодный кубик льда', extraText: 'Хороший. В сантиметре от правильного ответа', correct: false},
       {text: 'Я всегда один', extraText: 'Увы. Это другая песня', correct: false},
-      {text: 'Ялта август', extraText: 'Тот период был прекрасен исключительно благодаря тебе', correct: true},
+      {text: 'Ялта Август', extraText: 'Тот период был прекрасен исключительно благодаря тебе', correct: true},
     ]
   },
   {
