@@ -1,0 +1,9 @@
+.answer {
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 10px;
+}
+
+.answer:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+}

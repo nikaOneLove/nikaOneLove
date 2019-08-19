@@ -1,0 +1,19 @@
+:host {
+  background-color: #fafafa;
+}
+
+.quiz-button {
+  width: 100%;
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+.quiz-progress {
+  color: #9b9b9b;
+}
+
+.score-text {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2rem;
+}

@@ -1,0 +1,9 @@
+<div class="question">
+  <div class="question-text">{{ question.text }}</div>
+  <app-answer-group
+    [answers]="question.answers"
+    [check]="check"
+    (checkChange)="updateCheck($event)"
+  >
+  </app-answer-group>
+</div>

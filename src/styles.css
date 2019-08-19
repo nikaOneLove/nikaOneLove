@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100% - 56px);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.question {
+  margin: 40px 0;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.question-button {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  width: 50%;
+  align-self: center;
+}

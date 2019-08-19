@@ -1,0 +1,49 @@
+<div class="quiz-container">
+  <ng-container *ngTemplateOutlet="getTemplateName()"></ng-container>
+</div>
+
+
+<ng-template #questionTemplate>
+  <div class="quiz-progress">Прогресс: {{questionNumber}} вопрос из 10</div>
+  <app-question
+    [question]="question"
+    [check]="checked"
+    (checkChange)="updateCheck($event)"
+  ></app-question>
+  <button *ngIf="checked" (click)="next()" mat-raised-button class="quiz-button" color="primary">Дальше</button>
+</ng-template>
+
+
+<ng-template #previewTemplate>
+  <mat-card>
+    <img mat-card-image src="assets/images/11.jpg" alt="">
+    <mat-card-content>
+      <p class="preview-text">
+        Здравстуй, маленькая. Я долго думал, что подарить тебе на наши 11 месяцев. И надумал, что напомнить тебе о
+        нескольких моментах нашей совместной жизни - интересный вариант.
+      </p>
+      <div>Это интерактивная викторина нашей любви.</div>
+      <div>Надеюсь тебе понравится.</div>
+      <div>Безумно тебя люблю.
+        <mat-icon>favorite</mat-icon>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <button (click)="start()" mat-raised-button class="quiz-button" color="primary">Начать</button>
+</ng-template>
+
+<ng-template #finalTemplate>
+  <mat-card>
+    <img mat-card-image src="assets/images/8.jpg" alt="">
+    <mat-card-content>
+      <div class="score-text">
+        {{score}}/10
+      </div>
+      <p class="preview-text">
+        Знай, что я безумно по тебе скучаю. И страшно сильно люблю. Ты моя маленькая жена и половинка. Жизнь без тебя
+        это не жизнь.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <button (click)="startAgain()" mat-raised-button class="quiz-button" color="primary">Пройти еще раз</button>
+</ng-template>

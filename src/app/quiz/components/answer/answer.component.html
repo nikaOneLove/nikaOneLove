@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="icon">
+    <mat-icon *ngIf="innerChecked && !correctAnswer" class="negative">clear</mat-icon>
+    <mat-icon *ngIf="checked && correctAnswer" class="positive">done</mat-icon>
+
+    <div *ngIf="!checked" class="md-radio" (click)="check()"></div>
+  </div>
+
+  <div>
+  <span
+    (click)="check()"
+    class="label-text"
+    [ngClass]="{'positive': checked && correctAnswer, 'negative': innerChecked && !correctAnswer}"
+  >
+      <ng-content select=".text"></ng-content>
+  </span>
+    <div
+      *ngIf="innerChecked"
+      class="label-extra-text"
+    >
+      <ng-content select=".extra-text"></ng-content>
+    </div>
+  </div>
+</div>

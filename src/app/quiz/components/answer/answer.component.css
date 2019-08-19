@@ -1,0 +1,35 @@
+.md-radio {
+  box-sizing: border-box;
+  height: 24px;
+  width: 24px;
+  border-color: rgba(0, 0, 0, .54);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+  margin-bottom: 6px;
+}
+
+.label-text {
+  cursor: pointer;
+  line-height: 24px;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.label-extra-text {
+  font-size: 1rem;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 35px auto;
+  margin-bottom: 5px;
+}

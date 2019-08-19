@@ -1,0 +1,14 @@
+<ng-container *ngFor="let answer of answers">
+
+  <div class="answer">
+    <app-answer
+      [checked]="check"
+      (checkedChange)="updateCheck()"
+      [correctAnswer]="answer.correct"
+    >
+      <span class="text">{{ answer.text }}</span>
+      <span *ngIf="answer.extraText" class="extra-text">{{ answer.extraText }}</span>
+    </app-answer>
+  </div>
+
+</ng-container>
