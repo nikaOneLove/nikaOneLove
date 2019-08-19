@@ -42,7 +42,8 @@
         {{score}}/10
       </div>
       <p *ngIf="score >= 8">Вау, ты выходит самая большая маленькая любовь</p>
-      <p *ngIf="score >= 5 && score < 8">Хороший результат. Но можно лучше</p>
+      <p *ngIf="score >= 5 && score < 8">Средний результат. Если ты Ника, то я все равно тебя люблю, не смотря ни на
+        что</p>
       <p *ngIf="score < 5">Мда, могло быть лучше. Ты точно Ника?</p>
       <p *ngIf="score >= 8">
         Знай, что я безумно по тебе скучаю. И страшно сильно люблю. Ты моя маленькая жена и половинка. Жизнь без тебя
@@ -51,7 +52,7 @@
     </mat-card-content>
   </mat-card>
   <button (click)="startAgain()" mat-raised-button class="quiz-button" color="primary">Пройти еще раз</button>
-  <a href="https://music.yandex.ru/users/dmitriy.droby/playlists/1000">
+  <a *ngIf="score >= 8" href="https://music.yandex.ru/users/dmitriy.droby/playlists/1000">
     <button mat-raised-button class="quiz-button" color="primary">
       Забрать приз
       <mat-icon color="accent">music_note</mat-icon>

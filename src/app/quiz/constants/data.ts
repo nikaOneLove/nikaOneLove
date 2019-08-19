@@ -49,7 +49,7 @@ export const questions: readonly Question[] = [
     answers: [
       {
         text: 'Категория А, категория Б',
-        extraText: 'Твой смех над подобной мелочью каждрый раз поднимает мне настроение до небес',
+        extraText: 'Твой смех над подобной мелочью каждый раз поднимает мне настроение до небес',
         correct: true
       },
       {text: 'Гора в Греции', extraText: 'Может быть. Пойду схожу за учебником по географии', correct: false},
@@ -57,12 +57,15 @@ export const questions: readonly Question[] = [
     ]
   },
   {
-    text: 'Самый страшный страх Димы?',
+    text: 'Когда Ника уезжает далеко от мужа, она ...',
     answers: [
-      {text: 'Высота', extraText: 'Неа. Ошибулик', correct: false},
-      {text: 'Розовые пончики', extraText: 'Ахах, неплохо', correct: false},
-      {text: 'Клопы', extraText: 'Очень сильно их боюсь, но есть еще страшнее', correct: false},
-      {text: 'Заправленная кроватка', extraText: 'Ты мой личный сорт шахмат', correct: true}
+      {text: 'Говорит поливать цветок', extraText: 'Он близок к анабиозу', correct: false},
+      {text: 'Плачет навзрыд', extraText: 'Потому что в Риге идет дождь', correct: false},
+      {
+        text: 'Оставляет финики в бумаге',
+        extraText: 'Одно из самых приятных событий в моей жизни. Ты мой личный сорт шахмат',
+        correct: true
+      }
     ]
   },
   {
